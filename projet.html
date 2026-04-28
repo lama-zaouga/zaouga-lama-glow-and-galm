@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Glow & Glam</title>
+    <link rel="stylesheet" href="projet-style.css">
+</head>
+
+<body>
+
+    <!-- ====== CART PANEL ====== -->
+    <div class="cart_overlay" id="cart_overlay"></div>
+
+    <div class="cart_panel" id="cart_panel">
+        <div class="cart_panel_header">
+            <h2>Mon Panier</h2>
+            <button class="cart_close_btn" id="cart_close_btn">✕</button>
+        </div>
+
+        <div class="cart_items_list" id="cart_items_list">
+            <p class="cart_empty_msg" id="cart_empty_msg">Votre panier est vide.</p>
+        </div>
+
+        <div class="cart_panel_footer">
+            <div class="cart_total_row">
+                <span>Total :</span>
+                <span id="cart_total_display">0 DT</span>
+            </div>
+            <button class="checkout_btn" onclick="alert('Commande confirmée ! Merci 🌿')">Commander</button>
+            <button class="clear_cart_btn" id="clear_cart_btn">Vider le panier</button>
+        </div>
+    </div>
+
+    <!-- ====== HEADER ====== -->
+    <header>
+        <h1 class="header_name">Glow & Glam</h1>
+
+        <ul class="header_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <select name="categories" id="categories_select" class="bare_recherche">
+            <option value="">Categories</option>
+            <option value="hair care">Hair care</option>
+            <option value="skin care">Skin care</option>
+            <option value="body care">Body care</option>
+            <option value="perfume">Perfume</option>
+        </select>
+
+        <div class="cart_info">
+            <button class="cart_icon_btn" id="open_cart_btn">
+                <img src="images/basket.png" alt="panier" class="cart_icon">
+                <span id="cart_count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ====== HOME ====== -->
+    <div class="home">
+        <div class="home_left">
+            <h1>Glow</h1>
+            <h2>Starts Here,</h2>
+            <p>Indulge in a world of beauty where elegance meets care. Glow & Glam offers you a selection of products that nourish your skin, enhance your hair, and leave you feeling truly radiant.</p>
+            <button type="button" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+        </div>
+
+        <div class="home_right">
+            <img src="images/home.jpg" alt="home" class="home_pic">
+        </div>
+    </div>
+
+    <!-- ====== PRODUCTS ====== -->
+    <section id="products">
+
+        <!-- Produit 1 -->
+        <div class="product" data-category="hair care">
+            <img src="images/shampoo.jpg" alt="shampoo" class="product_img">
+            <div class="product_content">
+                <h3>Shampoo</h3>
+                <h5>42 DT</h5>
+                <p>Hair care</p>
+                <button class="add_to_cart_btn">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- Produit 2 -->
+        <div class="product" data-category="hair care">
+            <img src="images/hair oil.jpg" alt="hair oil" class="product_img">
+            <div class="product_content">
+                <h3>Hair Oil</h3>
+                <h5>27 DT</h5>
+                <p>Hair care</p>
+                <button class="add_to_cart_btn">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- Produit 3 -->
+        <div class="product" data-category="skin care">
+            <img src="images/cream.jpg" alt="face cream" class="product_img">
+            <div class="product_content">
+                <h3>Face Cream</h3>
+                <h5>55 DT</h5>
+                <p>Skin care</p>
+                <button class="add_to_cart_btn">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- Produit 4 -->
+        <div class="product" data-category="skin care">
+            <img src="images/serum.jpg" alt="face serum" class="product_img">
+            <div class="product_content">
+                <h3>Face Serum</h3>
+                <h5>70 DT</h5>
+                <p>Skin care</p>
+                <button class="add_to_cart_btn">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- Produit 5 -->
+        <div class="product" data-category="body care">
+            <img src="images/body lotion.jpg" alt="body lotion" class="product_img">
+            <div class="product_content">
+                <h3>Body Lotion</h3>
+                <h5>22 DT</h5>
+                <p>Body care</p>
+                <button class="add_to_cart_btn">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- Produit 6 -->
+        <div class="product" data-category="body care">
+            <img src="images/body scrub.jpg" alt="body scrub" class="product_img">
+            <div class="product_content">
+                <h3>Body Scrub</h3>
+                <h5>25 DT</h5>
+                <p>Body care</p>
+                <button class="add_to_cart_btn">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- Produit 7 -->
+        <div class="product" data-category="perfume">
+            <img src="images/parfum oud.jpg" alt="oud perfume" class="product_img">
+            <div class="product_content">
+                <h3>Oud Perfume</h3>
+                <h5>75 DT</h5>
+                <p>Perfume</p>
+                <button class="add_to_cart_btn">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- Produit 8 -->
+        <div class="product" data-category="perfume">
+            <img src="images/parfum floral.jpg" alt="floral perfume" class="product_img">
+            <div class="product_content">
+                <h3>Floral Perfume</h3>
+                <h5>66 DT</h5>
+                <p>Perfume</p>
+                <button class="add_to_cart_btn">Add to cart</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        <h5>Follow us</h5>
+        <ul class="social_media">
+            <li><a href="#">
+                <img src="images/instagram.png" alt="instagram" class="social_img">
+            </a></li>
+            <li><a href="#">
+                <img src="images/facebook.png" alt="facebook" class="social_img">
+            </a></li>
+            <li><a href="#">
+                <img src="images/twitter.png" alt="twitter" class="social_img">
+            </a></li>
+        </ul>
+        <h6>© 2025 - 2026</h6>
+    </footer>
+
+    <script src="projet-script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
