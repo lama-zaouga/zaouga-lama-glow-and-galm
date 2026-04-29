@@ -35,6 +35,7 @@ function updateTotalDisplay() {
 }
 
 // ====== AFFICHER LES ARTICLES DU PANIER ======
+// Fonction pour afficher les articles du panier
 function renderCartItems() {
     cartItemsList.innerHTML = "";
 
