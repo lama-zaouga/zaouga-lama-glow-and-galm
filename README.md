@@ -16,7 +16,7 @@ Site e-commerce de produits de beauté permettant de parcourir, filtrer et achet
 - Panneau panier latéral interactif
 
 ## Lien GitHub Pages
-https://lama-zaouga.github.io/zaouga_lama_glow_and_glam/
+https://lama-zaouga.github.io/zaouga-lama-glow-and-galm/
 
 ## Nouveautés explorées
 - Utilisation de localStorage pour sauvegarder le panier
